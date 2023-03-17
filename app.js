@@ -79,7 +79,7 @@ class Bd {
 
       //mes
       if(despesa.mes != '') {
-          console.log('Filtro de ano')
+          console.log('Filtro de mes')
           despesasFiltradas = despesasFiltradas.filter(d => d.mes == despesa.mes)
       }
 
@@ -193,7 +193,7 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
 
       //ajustar o tipo
       switch(d.tipo) {
-          case '1': d.tipo = 'Alimentação'
+          case '1': d.tipo = 'Supermercado/Outos'
               break
           case '2': d.tipo = 'Educação'
               break
@@ -201,7 +201,9 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
               break
           case '4': d.tipo = 'Saúde'
               break
-          case '5': d.tipo = 'Transporte'
+          case '5': d.tipo = 'Gasolina'
+              break
+          case '6': d.tipo = 'Cartão'
               break
       }
       linha.insertCell(1).innerHTML = d.tipo
